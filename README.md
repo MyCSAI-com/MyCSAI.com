@@ -45,26 +45,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100 Things About MyCSAI</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f0f4f8;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            color: #4b6cb7;
-        }
-        ol {
-            margin-top: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
     <h1>100 Things About MyCSAI</h1>
