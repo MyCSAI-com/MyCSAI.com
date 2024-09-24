@@ -40,3 +40,49 @@
 </html>
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MyCSAI.com</title>
+</head>
+<body>
+    <h1>Welcome to MyCSAI.com</h1>
+    <p>Your AI-Powered Content Creation Platform</p>
+    <h2>About MyCSAI</h2>
+    <p>
+        At MyCSAI.com, we believe in transforming the way creators and businesses generate content. 
+        Our AI-driven tools empower you to craft engaging, high-quality content effortlessly. 
+        Join us as we revolutionize content creation!
+    </p>
+    <h2>Our Tools</h2>
+    <div>
+        <h3>Content Generator</h3>
+        <img src="https://via.placeholder.com/150" alt="Content Generator" style="width:150px;height:auto;">
+        <p>Create engaging blog posts, articles, and social media content in seconds!</p>
+    </div>
+    <div>
+        <h3>Text-to-Speech</h3>
+        <img src="https://via.placeholder.com/150" alt="Text-to-Speech Tool" style="width:150px;height:auto;">
+        <p>Convert your text into natural-sounding speech for accessibility and engagement.</p>
+    </div>
+    <div>
+        <h3>Image Generator</h3>
+        <img src="https://via.placeholder.com/150" alt="Image Generator" style="width:150px;height:auto;">
+        <p>Generate stunning images based on your content needs in just a few clicks!</p>
+    </div>
+    <h2>A Note from the Founder</h2>
+    <p>
+        Hello, I'm Harshit Kumar! After years as a professional software developer, I created 
+        MyCSAI.com to make advanced AI accessible to everyone. My vision is to empower individuals 
+        and businesses with tools that enhance creativity and productivity.
+    </p>
+    <footer>
+        <p>&copy; 2024 MyCSAI.com</p>
+        <p>Follow us on Instagram: <a href="https://www.instagram.com/h4sh.p/">@h4sh.p</a></p>
+    </footer>
+</body>
+</html>
+
+
