@@ -1,147 +1,102 @@
-/* General Body Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHx8fDE2Mzg1NzMzMDE&ixlib=rb-4.0.3&q=80&w=1080');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://static.zerochan.net/Black.AI.full.2476632.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    color: #333;
 }
 
-/* Important Update Banner */
-div {
-    border: 1px solid #dc3545;
-    background-color: rgba(248, 215, 218, 0.9);
-    padding: 15px;
-    border-radius: 5px;
-    color: #721c24;
-    text-align: center;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-/* Main Section Styles */
 .image-generator {
     text-align: center;
-    margin: 40px 0;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
     border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Styles */
 .generate-form {
-    display: inline-block;
+    margin: 20px 0;
 }
 
 .prompt-input {
     padding: 10px;
-    font-size: 16px;
     border-radius: 5px;
-    border: none;
-    margin-right: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
 }
 
 .controls {
     display: inline-block;
+    margin-left: 10px;
 }
 
 .img-quantity {
     padding: 10px;
     border-radius: 5px;
-    border: none;
-    margin-right: 10px;
+    border: 1px solid #ccc;
 }
 
-/* Button Styles */
 .generate-btn {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #dc3545; /* Bootstrap's primary red */
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.generate-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Image Gallery Styles */
 .image-gallery {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 20px 0;
 }
 
 .img-card {
-    display: inline-block;
     margin: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.img-card:hover {
-    transform: scale(1.05);
+    width: 120px; /* Set a fixed width for the image cards */
+    height: 120px; /* Set a fixed height for the image cards */
+    position: relative;
 }
 
 .img-card img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Makes the image fill the card */
+    height: 100%; /* Ensures the image covers the card */
+    object-fit: cover; /* Maintains aspect ratio while covering the card */
 }
 
-/* User Count Styles */
+.loading img {
+    display: block;
+    margin: 0 auto; /* Center the loading image */
+}
+
+.download-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
 .user-count {
+    margin: 20px 0;
+}
+
+footer {
+    margin-top: 20px;
     text-align: center;
-    margin: 20px;
-    font-size: 20px;
+    font-size: 0.9em;
 }
 
-/* Feedback Form Styles */
-textarea {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    margin: 10px 0;
+.social-links {
+    margin-top: 10px;
 }
 
-button[type="submit"] {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #28a745;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #218838;
-}
-
-/* Founder Section Styles */
 .social-links a {
     margin: 0 10px;
-    color: #007bff;
     text-decoration: none;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    margin-top: 20px;
-    border-top: 1px solid #ddd;
+    color: #dc3545; /* Bootstrap's primary red */
 }
 
