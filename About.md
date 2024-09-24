@@ -33,7 +33,9 @@
         <p>Follow us on Instagram: <a href="https://www.instagram.com/h4sh.p/">@h4sh.p</a></p>
     </footer>
 
-</body>![Colorful_Modern_K_Letter_Free_Logo_4_-removebg-preview](https://github.com/user-attachments/assets/b89db8d5-fcc0-4e23-aae6-94748209ef6e)
+</body>
+
+![csai](https://github.com/user-attachments/assets/6b0056cd-b3e1-482c-a1cf-e4dc9494c178)
 
 </html>
 
