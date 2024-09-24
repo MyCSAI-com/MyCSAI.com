@@ -190,3 +190,4 @@
 </body>
 </html>
 
+MyCSAI was founded in 2024 by Harshit Kumar, aiming to revolutionize AI content creation. Recognizing the growing demand for accessible AI tools, Harshit envisioned a platform that empowers users to leverage AI for diverse applications, including text-to-speech, speech-to-text, and content generation. The platform combines open-source technologies to provide a cost-effective solution for creators. With a focus on user-centric design, MyCSAI fosters community engagement, offering features like collaboration tools and monetization options. As the AI landscape evolves, MyCSAI continues to adapt, aiming to become the go-to resource for creators seeking innovative, efficient, and user-friendly AI solutions.
