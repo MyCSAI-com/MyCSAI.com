@@ -38,7 +38,7 @@ const generateAiImages = async (userPrompt, userImgQuantity) => {
       }),
     });
 
-    if(!response.ok) throw new Error("Failed to generate AI images. Make sure your API key is valid.");
+    if(!response.ok) throw new Error("The server is currently busy due to high user activity. Please try again later. Thank you for your patience!");
 
     const { data } = await response.json(); 
     updateImageCard([...data]);
