@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Image Generator by MyCSAI.COM</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script> <!-- Use defer to load JS after HTML -->
     <script>
         function sendMessage(event) {
             event.preventDefault(); // Prevent form submission
@@ -15,6 +13,11 @@
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
             window.open(whatsappUrl, '_blank'); // Open WhatsApp with the message
             document.getElementById('feedbackForm').reset(); // Reset the form
+        }
+
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block'; // Show notification
         }
 
         function getRandomUserCount() {
@@ -46,7 +49,7 @@
                     <option value="3">3 Images</option>
                     <option value="4" selected>4 Images</option>
                 </select>
-                <button type="button" class="generate-btn">Generate</button>
+                <button type="button" class="generate-btn" onclick="showNotification()">Generate</button>
             </div>
 
             <div id="notification" style="display: none; color: red; margin-top: 20px;">
