@@ -45,8 +45,28 @@
         <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Type your feedback here..." required></textarea><br>
         <button type="submit">Send Feedback</button>
     </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        .form-container {
+            text-align: center; /* Center the text */
+            margin: 20px; /* Add some margin */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm" onsubmit="sendMessage(event)">
+            <label for="feedback">Your Feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Type your feedback here..." required></textarea><br>
+            <button type="submit">Send Feedback</button>
+        </form>
+    </div>
 
-    <script style="text-align: center;">
+    <script>
         function sendMessage(event) {
             event.preventDefault(); // Prevent form submission
             const feedback = document.getElementById('feedback').value;
@@ -57,6 +77,7 @@
             document.getElementById('feedbackForm').reset(); // Reset the form
         }
     </script>
+</body>
 </body>
    <footer>
     <div style="text-align: center;">
