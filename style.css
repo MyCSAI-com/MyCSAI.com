@@ -1,102 +1,113 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('https://static.zerochan.net/Black.AI.full.2476632.jpg'); /* Replace with your background image path */
+    background-image: url('path/to/your/background-image.jpg'); /* Update this path */
     background-size: cover;
+    margin: 0;
+    padding: 20px;
     color: #333;
+}
+
+h1, h2, p {
+    margin: 10px 0;
 }
 
 .image-generator {
     text-align: center;
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: 2px solid #007bff; /* Outline for the image generator section */
 }
 
 .generate-form {
-    margin: 20px 0;
+    display: inline-block;
 }
 
 .prompt-input {
     padding: 10px;
-    border-radius: 5px;
     border: 1px solid #ccc;
-    width: 300px;
+    border-radius: 5px;
+    outline: 2px solid transparent; /* Transparent outline initially */
+}
+
+.prompt-input:focus {
+    outline: 2px solid #007bff; /* Focused outline for the input */
 }
 
 .controls {
-    display: inline-block;
-    margin-left: 10px;
-}
-
-.img-quantity {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    margin-top: 10px;
 }
 
 .generate-btn {
     padding: 10px 15px;
     border: none;
-    border-radius: 5px;
-    background-color: #dc3545; /* Bootstrap's primary red */
+    background-color: #007bff;
     color: white;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+    outline: 2px solid transparent; /* Transparent outline initially */
+}
+
+.generate-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    outline: 2px solid #0056b3; /* Outline on hover */
 }
 
 .image-gallery {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .img-card {
     margin: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
-    width: 120px; /* Set a fixed width for the image cards */
-    height: 120px; /* Set a fixed height for the image cards */
-    position: relative;
+    outline: 2px solid #28a745; /* Outline for each image card */
+    transition: box-shadow 0.3s;
+}
+
+.img-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .img-card img {
-    width: 100%; /* Makes the image fill the card */
-    height: 100%; /* Ensures the image covers the card */
-    object-fit: cover; /* Maintains aspect ratio while covering the card */
-}
-
-.loading img {
+    max-width: 150px; /* Size adjustment for images */
+    max-height: 150px; /* Size adjustment for images */
     display: block;
-    margin: 0 auto; /* Center the loading image */
 }
 
 .download-btn {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    outline: 2px solid transparent; /* Transparent outline initially */
+}
+
+.download-btn:hover {
+    background-color: #218838; /* Darker shade on hover */
+    outline: 2px solid #218838; /* Outline on hover */
 }
 
 .user-count {
+    text-align: center;
     margin: 20px 0;
+    outline: 2px solid #ffc107; /* Outline for user count section */
+    padding: 10px;
+    border-radius: 5px;
 }
 
 footer {
-    margin-top: 20px;
     text-align: center;
-    font-size: 0.9em;
+    margin-top: 20px;
+    outline: 2px solid #6c757d; /* Outline for footer */
+    padding: 10px;
+    border-radius: 5px;
 }
-
-.social-links {
-    margin-top: 10px;
-}
-
-.social-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #dc3545; /* Bootstrap's primary red */
-}
-
