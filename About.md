@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Welcome to MyCSAI.com</h1>
+    <img src="https://github.com/user-attachments/assets/6b0056cd-b3e1-482c-a1cf-e4dc9494c178" alt="MyCSAI Logo" style="width:100px;height:auto;"> <!-- Logo with size -->
     <p>Your AI-Powered Content Creation Platform</p>
     <h2>About MyCSAI</h2>
     <p>
@@ -27,37 +28,6 @@
     <p>
         With MyCSAI.com, I aim to build a community of innovators and creators who are ready to embrace 
         the future of content creation. Let's explore the endless possibilities together!
-    </p>
-    <footer>
-        <p>&copy; 2024 MyCSAI.com</p>
-        <p>Follow us on Instagram: <a href="https://www.instagram.com/h4sh.p/">@h4sh.p</a></p>
-    </footer>
-
-
-  <h2>Our Tools</h2>
-    <div>
-        <h3>Content Generator</h3>
-        <img src="![about-img-3](https://github.com/user-attachments/assets/1f59b414-2e02-43c2-b764-f193e4872d8b)
-" alt="Content Generator" style="width:150px;height:auto;">
-        <p>Create engaging blog posts, articles, and social media content in seconds!</p>
-    </div>
-    <div>
-        <h3>Text-to-Speech</h3>
-        <img src="![choose-section-1-img-3](https://github.com/user-attachments/assets/0ac695ca-b51b-4416-870a-3a292059424a)
-" alt="Text-to-Speech Tool" style="width:150px;height:auto;">
-        <p>Convert your text into natural-sounding speech for accessibility and engagement.</p>
-    </div>
-    <div>
-        <h3>Image Generator</h3>
-        <img src="![dash-img-1](https://github.com/user-attachments/assets/7bc07139-c301-48ce-9b31-d2321a21817b)
-" alt="Image Generator" style="width:150px;height:auto;">
-        <p>Generate stunning images based on your content needs in just a few clicks!</p>
-    </div>
-    <h2>A Note from the Founder</h2>
-    <p>
-        Hello, I'm Harshit Kumar! After years as a professional software developer, I created 
-        MyCSAI.com to make advanced AI accessible to everyone. My vision is to empower individuals 
-        and businesses with tools that enhance creativity and productivity.
     </p>
     <footer>
         <p>&copy; 2024 MyCSAI.com</p>
