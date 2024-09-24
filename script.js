@@ -2,10 +2,32 @@
 const generateForm = document.querySelector(".generate-form");
 const generateBtn = generateForm.querySelector(".generate-btn");
 const imageGallery = document.querySelector(".image-gallery");
+const notificationBar = document.createElement("div");
+notificationBar.className = "notification-bar";
+document.body.appendChild(notificationBar);
 
 // API Key (ensure to manage this securely in production)
 const OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"; 
 let isImageGenerating = false;
+
+// Function to show notification
+const showNotification = (message) => {
+    notificationBar.textContent = message; // Set the message
+    notificationBar.style.display = 'block'; // Show the notification bar
+    notificationBar.style.backgroundColor = '#f8d7da'; // Light red background
+    notificationBar.style.color = '#721c24'; // Dark red text
+    notificationBar.style.padding = '10px';
+    notificationBar.style.borderRadius = '5px';
+    notificationBar.style.textAlign = 'center';
+    notificationBar.style.margin = '20px auto';
+    notificationBar.style.maxWidth = '800px';
+    notificationBar.style.position = 'relative';
+    notificationBar.style.animation = 'slideIn 0.5s forwards';
+    
+    setTimeout(() => {
+        notificationBar.style.display = 'none'; // Hide after 5 seconds
+    }, 5000);
+};
 
 // Function to update the image cards with generated images
 const updateImageCard = (imgDataArray) => {
@@ -42,12 +64,15 @@ const generateAiImages = async (userPrompt, userImgQuantity) => {
       }),
     });
 
-    if (!response.ok) throw new Error("The server is currently busy due to high user activity. Please try again later. Thank you for your patience!");
+    if (!response.ok) {
+      showNotification("The server is currently busy due to high user activity. Please try again later. Thank you for your patience!"); // Show notification
+      throw new Error("Server busy");
+    }
 
     const { data } = await response.json(); 
     updateImageCard([...data]);
   } catch (error) {
-    alert(error.message);
+    // Handling error already done in showNotification function
   } finally {
     generateBtn.removeAttribute("disabled");
     generateBtn.innerText = "Generate";
@@ -83,4 +108,24 @@ const handleImageGeneration = (e) => {
 
 // Add event listener to the form
 generateForm.addEventListener("submit", handleImageGeneration);
+
+// CSS Animation for notification bar
+const style = document.createElement('style');
+style.innerHTML = `
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.notification-bar {
+    display: none; /* Initially hidden */
+}
+`;
+document.head.appendChild(style);
+
 
