@@ -1,62 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <div style="border: 1px solid #dc3545; background-color: #f8d7da; padding: 15px; border-radius: 5px; color: #721c24; text-align: center;">
-    <h2>🚧 Important Update!</h2>
-    <p>We are thrilled to announce that we have just started the development process for MyCSAI! Our dedicated team is working hard to create innovative AI tools for content creation. Please note that we are still in the early stages, and some features may not be fully functional yet. Your feedback is crucial, so stay tuned for updates as we continue to refine and improve the platform. Thank you for your support and patience during this exciting journey!</p>
-</div>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Image Generator by MyCSAI.COM</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <section class="image-generator">
-    <div class="content">
-      <h1>AI Image Generator Tool </h1>
-      <p>Convert your text into an image within a second using this
-        MyCSAI-powered AI Image Generator tool</p>
-      <form action="#" class="generate-form">
-        <input class="prompt-input" type="text" placeholder="Describe what you want to see" required>
-        <div class="controls">
-          <select class="img-quantity">
-            <option value="1">1 Image</option>
-            <option value="2">2 Images</option>
-            <option value="3">3 Images</option>
-            <option value="4" selected>4 Images</option>
-          </select>
-          <button type="submit" class="generate-btn">Generate</button>
-        </div>
-      </form>
-    </div>
-  </section>
-  <section class="image-gallery">
-    <div class="img-card"><img src="images/img-1.jpg" alt="image"></div>
-    <div class="img-card"><img src="images/img-2.jpg" alt="image"></div>
-    <div class="img-card"><img src="images/img-3.jpg" alt="image"></div>
-    <div class="img-card"><img src="images/img-4.jpg" alt="image"></div>
-  </section>
-</body>
-   <body>
-    <h2>Feedback Form</h2>
-    <form id="feedbackForm" onsubmit="sendMessage(event)">
-        <label for="feedback">Your Feedback:</label><br>
-        <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Type your feedback here..." required></textarea><br>
-        <button type="submit">Send Feedback</button>
-    </form>
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form</title>
+    <title>AI Image Generator by MyCSAI.COM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <style>
-        .form-container {
-            text-align: center; /* Center the text */
-            margin: 20px; /* Add some margin */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .image-generator, .image-gallery, .form-container, .user-count, .card, footer {
+            text-align: center;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .user-count {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .feedback-container, .card {
+            max-width: 600px;
+        }
+        .card img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+        footer {
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+    <div style="border: 1px solid #dc3545; background-color: #f8d7da; padding: 15px; border-radius: 5px; color: #721c24;">
+        <h2>🚧 Important Update!</h2>
+        <p>We have just started the development process for MyCSAI! Our team is working hard to create innovative AI tools. Stay tuned for updates!</p>
+    </div>
+
+    <section class="image-generator">
+        <h1>AI Image Generator Tool</h1>
+        <p>Convert your text into an image within a second using the MyCSAI-powered AI Image Generator tool.</p>
+        <form action="#" class="generate-form">
+            <input class="prompt-input" type="text" placeholder="Describe what you want to see" required>
+            <div class="controls">
+                <select class="img-quantity">
+                    <option value="1">1 Image</option>
+                    <option value="2">2 Images</option>
+                    <option value="3">3 Images</option>
+                    <option value="4" selected>4 Images</option>
+                </select>
+                <button type="submit" class="generate-btn">Generate</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="image-gallery">
+        <div class="img-card"><img src="images/img-1.jpg" alt="image"></div>
+        <div class="img-card"><img src="images/img-2.jpg" alt="image"></div>
+        <div class="img-card"><img src="images/img-3.jpg" alt="image"></div>
+        <div class="img-card"><img src="images/img-4.jpg" alt="image"></div>
+    </section>
+
+    <section class="user-count">
+        Users Online: <span id="userCount">0</span>
+    </section>
+
     <div class="form-container">
         <h2>Feedback Form</h2>
         <form id="feedbackForm" onsubmit="sendMessage(event)">
@@ -66,48 +88,34 @@
         </form>
     </div>
 
+    <div class="card">
+        <h2>About the Founder</h2>
+        <img src="https://avatars.githubusercontent.com/u/182612734?v=4" alt="Harshit Kumar">
+        <p>Harshit Kumar, Age: 18</p>
+        <p>Experience: 2+ years in software development</p>
+        <p>Aspiring AI Innovator</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/h4sh.p/" target="_blank">Instagram</a>
+            <a href="https://github.com/user-attachments" target="_blank">GitHub</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MyCSAI.com</p>
+        <p>Follow us on Instagram: <a href="https://www.instagram.com/h4sh.p/" style="color: white;">@h4sh.p</a></p>
+    </footer>
+
     <script>
         function sendMessage(event) {
             event.preventDefault(); // Prevent form submission
             const feedback = document.getElementById('feedback').value;
-            const whatsappNumber = '+919793615094'; // Replace with your WhatsApp number (including country code)
+            const whatsappNumber = '+919793615094'; // Replace with your WhatsApp number
             const message = encodeURIComponent(feedback);
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
             window.open(whatsappUrl, '_blank'); // Open WhatsApp with the message
             document.getElementById('feedbackForm').reset(); // Reset the form
         }
-    </script>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake User Count</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        .user-count {
-            background-color: #007BFF;
-            color: white;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 24px;
-        }
-    </style>
-</head>
-<body>
-    <div class="user-count">
-        Users Online: <span id="userCount">0</span>
-    </div>
-
-    <script>
         function getRandomUserCount() {
             // Generate a random number between 100 and 1000
             return Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
@@ -117,35 +125,6 @@
         document.getElementById('userCount').innerText = getRandomUserCount();
     </script>
 </body>
-</head>
-<body>
-    <div class="card">
-        <img src="https://avatars.githubusercontent.com/u/182612734?v=4" alt="Harshit Kumar">
-        <h2>Harshit Kumar</h2>
-        <p>Founder of MyCSAI</p>
-        <p>Age: 18</p>
-        <p>Experience: 2+ years in software development</p>
-        <p>Aspiring AI Innovator</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/h4sh.p/" target="_blank">Instagram</a>
-            <a href="https://github.com/user-attachments" target="_blank">GitHub</a>
-        </div>
-    </div>
-</body>
-
-</body>
-</body>
-   <footer>
-    <div style="text-align: center;">
-        <p>&copy; 2024 MyCSAI.com</p>
-        <p>Follow us on Instagram: <a href="https://www.instagram.com/h4sh.p/">@h4sh.p</a></p>
-    </div>
-</footer>
-  <section style="text-align: center;">
-    <h2>About the Founder</h2>
-    <img src="https://avatars.githubusercontent.com/u/182612734?v=4" alt="MyCSAI Logo" style="width: 100px; height: auto;">
-    <p>Harshit Kumar, founder of MyCSAI, aims to empower creators with AI tools that simplify content creation. His vision is to make advanced technology accessible for everyone, fostering innovation and collaboration. Join us on this journey to transform the future of creativity!</p>
-</section>
 </html>
 
 
