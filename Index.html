@@ -78,10 +78,10 @@
         }
     </script>
 
-   <head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Founder Info</title>
+    <title>Fake User Count</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -92,36 +92,31 @@
             margin: 0;
             background-color: #f4f4f4;
         }
-        .card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
+        .user-count {
+            background-color: #007BFF;
+            color: white;
             padding: 20px;
-            margin: 20px;
-        }
-        .card img {
-            width: 100px;
-            height: auto;
-            border-radius: 50%; /* Make the image circular */
-            margin-bottom: 15px;
-        }
-        .card h2 {
-            font-size: 20px;
-            margin: 10px 0;
-        }
-        .card p {
-            font-size: 14px;
-            color: #555;
-            margin: 5px 0;
-        }
-        .social-links a {
-            margin: 0 5px;
-            text-decoration: none;
-            color: #007BFF;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 24px;
         }
     </style>
+</head>
+<body>
+    <div class="user-count">
+        Users Online: <span id="userCount">0</span>
+    </div>
+
+    <script>
+        function getRandomUserCount() {
+            // Generate a random number between 100 and 1000
+            return Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+        }
+
+        // Update the user count on page load
+        document.getElementById('userCount').innerText = getRandomUserCount();
+    </script>
+</body>
 </head>
 <body>
     <div class="card">
