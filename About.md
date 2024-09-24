@@ -36,7 +36,6 @@
 
 </body>
 
-![csai](https://github.com/user-attachments/assets/6b0056cd-b3e1-482c-a1cf-e4dc9494c178)
 
 </html>
 
