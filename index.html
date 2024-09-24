@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Image Generator by MyCSAI.COM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Use defer to load JS after HTML -->
     <script>
         function sendMessage(event) {
             event.preventDefault(); // Prevent form submission
@@ -29,8 +29,6 @@
     </script>
 </head>
 <body>
-        <script src="script.js"></script> <!-- Link to your JavaScript file -->
-
     <div style="border: 1px solid #dc3545; background-color: #f8d7da; padding: 15px; border-radius: 5px; color: #721c24; text-align: center; margin: 20px;">
         <h2>🚧 Important Update!</h2>
         <p>We have just started the development process for MyCSAI! Our team is working hard to create innovative AI tools. Stay tuned for updates!</p>
@@ -41,32 +39,19 @@
         <p>Convert your text into an image within a second using the MyCSAI-powered AI Image Generator tool.</p>
         <form action="#" class="generate-form" style="display: inline-block;">
             <input class="prompt-input" type="text" placeholder="Describe what you want to see" required>
-           <body>
-    <h1>AI Image Generator Tool</h1>
-    <div class="controls">
-        <select class="img-quantity">
-            <option value="1">1 Image</option>
-            <option value="2">2 Images</option>
-            <option value="3">3 Images</option>
-            <option value="4" selected>4 Images</option>
-        </select>
-        <button type="button" class="generate-btn">Generate</button>
-    </div>
+            <div class="controls">
+                <select class="img-quantity">
+                    <option value="1">1 Image</option>
+                    <option value="2">2 Images</option>
+                    <option value="3">3 Images</option>
+                    <option value="4" selected>4 Images</option>
+                </select>
+                <button type="button" class="generate-btn">Generate</button>
+            </div>
 
-    <div id="notification" style="display: none; color: red; margin-top: 20px;">
-        ⚠️ The server is currently busy due to high user activity. Please try again later. Thank you for your patience!
-    </div>
-
-    <script>
-        const generateBtn = document.querySelector('.generate-btn');
-        const notification = document.getElementById('notification');
-
-        generateBtn.addEventListener('click', () => {
-            // Show the notification when the button is clicked
-            notification.style.display = 'block';
-        });
-    </script>
-</body>
+            <div id="notification" style="display: none; color: red; margin-top: 20px;">
+                ⚠️ The server is currently busy due to high user activity. Please try again later. Thank you for your patience!
+            </div>
         </form>
     </section>
 
