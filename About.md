@@ -37,17 +37,20 @@
   <h2>Our Tools</h2>
     <div>
         <h3>Content Generator</h3>
-        <img src="[https://via.placeholder.com/150](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.contentful.com%2Fblog%2Fextend-experiences-scale-fast-ai-content-generator%2F&psig=AOvVaw0HSJCnBlcL1ucVOjKPf2sB&ust=1727252336390000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiKutvU24gDFQAAAAAdAAAAABAJ)" alt="Content Generator" style="width:150px;height:auto;">
+        <img src="![about-img-3](https://github.com/user-attachments/assets/1f59b414-2e02-43c2-b764-f193e4872d8b)
+" alt="Content Generator" style="width:150px;height:auto;">
         <p>Create engaging blog posts, articles, and social media content in seconds!</p>
     </div>
     <div>
         <h3>Text-to-Speech</h3>
-        <img src="https://via.placeholder.com/150" alt="Text-to-Speech Tool" style="width:150px;height:auto;">
+        <img src="![choose-section-1-img-3](https://github.com/user-attachments/assets/0ac695ca-b51b-4416-870a-3a292059424a)
+" alt="Text-to-Speech Tool" style="width:150px;height:auto;">
         <p>Convert your text into natural-sounding speech for accessibility and engagement.</p>
     </div>
     <div>
         <h3>Image Generator</h3>
-        <img src="https://via.placeholder.com/150" alt="Image Generator" style="width:150px;height:auto;">
+        <img src="![dash-img-1](https://github.com/user-attachments/assets/7bc07139-c301-48ce-9b31-d2321a21817b)
+" alt="Image Generator" style="width:150px;height:auto;">
         <p>Generate stunning images based on your content needs in just a few clicks!</p>
     </div>
     <h2>A Note from the Founder</h2>
