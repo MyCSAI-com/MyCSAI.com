@@ -1,10 +1,13 @@
+// Selectors
 const generateForm = document.querySelector(".generate-form");
 const generateBtn = generateForm.querySelector(".generate-btn");
 const imageGallery = document.querySelector(".image-gallery");
 
-const OPENAI_API_KEY = "sk-svcacct-yyPAi2fIpNkK3z2pn4RxFQkdojD6oUro_Cw1jPuDWswQOIBdsvV79pK-O8PlD-T3BlbkFJPI-3jx7aIIGcVibfH6d-Y7HAC4D7cNTLei9aAmiYrAqgWgaVYQNBqtNetbPPYA"; 
+// API Key (ensure to manage this securely in production)
+const OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"; 
 let isImageGenerating = false;
 
+// Function to update the image cards with generated images
 const updateImageCard = (imgDataArray) => {
   imgDataArray.forEach((imgObject, index) => {
     const imgCard = imageGallery.querySelectorAll(".img-card")[index];
@@ -17,11 +20,12 @@ const updateImageCard = (imgDataArray) => {
     imgElement.onload = () => {
       imgCard.classList.remove("loading");
       downloadBtn.setAttribute("href", aiGeneratedImage);
-      downloadBtn.setAttribute("download", `${new Date().getTime()}.jpg`);
-    }
+      downloadBtn.setAttribute("download", `image-${new Date().getTime()}.jpg`);
+    };
   });
-}
+};
 
+// Function to generate AI images
 const generateAiImages = async (userPrompt, userImgQuantity) => {
   try {
     const response = await fetch("https://api.openai.com/v1/images/generations", {
@@ -38,7 +42,7 @@ const generateAiImages = async (userPrompt, userImgQuantity) => {
       }),
     });
 
-    if(!response.ok) throw new Error("The server is currently busy due to high user activity. Please try again later. Thank you for your patience!");
+    if (!response.ok) throw new Error("The server is currently busy due to high user activity. Please try again later. Thank you for your patience!");
 
     const { data } = await response.json(); 
     updateImageCard([...data]);
@@ -49,30 +53,34 @@ const generateAiImages = async (userPrompt, userImgQuantity) => {
     generateBtn.innerText = "Generate";
     isImageGenerating = false;
   }
-}
+};
 
+// Handle image generation on form submission
 const handleImageGeneration = (e) => {
   e.preventDefault();
-  if(isImageGenerating) return;
+  if (isImageGenerating) return;
 
-  const userPrompt = e.srcElement[0].value;
-  const userImgQuantity = parseInt(e.srcElement[1].value);
+  const userPrompt = e.target[0].value; // Get the user input from the form
+  const userImgQuantity = parseInt(e.target[1].value); // Parse quantity to integer
   
   generateBtn.setAttribute("disabled", true);
   generateBtn.innerText = "Generating";
   isImageGenerating = true;
-  
+
+  // Create loading image cards while generating images
   const imgCardMarkup = Array.from({ length: userImgQuantity }, () => 
-      `<div class="img-card loading">
-        <img src="images/loader.svg" alt="AI generated image">
-        <a class="download-btn" href="#">
-          <img src="images/download.svg" alt="download icon">
-        </a>
-      </div>`
+    `<div class="img-card loading">
+      <img src="images/loader.svg" alt="AI generated image">
+      <a class="download-btn" href="#">
+        <img src="images/download.svg" alt="download icon">
+      </a>
+    </div>`
   ).join("");
 
-  imageGallery.innerHTML = imgCardMarkup;
-  generateAiImages(userPrompt, userImgQuantity);
-}
+  imageGallery.innerHTML = imgCardMarkup; // Insert loading cards
+  generateAiImages(userPrompt, userImgQuantity); // Generate images
+};
 
+// Add event listener to the form
 generateForm.addEventListener("submit", handleImageGeneration);
+
