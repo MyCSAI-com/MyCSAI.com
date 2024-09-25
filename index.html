@@ -17,8 +17,15 @@
         }
 
         function showNotification() {
+            const loading = document.getElementById('loading');
             const notification = document.getElementById('notification');
-            notification.style.display = 'block'; // Show notification
+            
+            loading.style.display = 'block'; // Show loading animation
+
+            setTimeout(() => {
+                loading.style.display = 'none'; // Hide loading animation after 2 seconds
+                notification.style.display = 'block'; // Show notification after loading
+            }, 2000); // Simulate a 2-second server delay
         }
 
         function getRandomUserCount() {
@@ -54,6 +61,12 @@
                     <button type="button" class="generate-btn" onclick="showNotification()">Generate</button>
                 </div>
 
+                <!-- Loading animation -->
+                <div id="loading" style="display: none; color: blue; margin-top: 20px;">
+                    ⏳ Generating your image... Please wait.
+                </div>
+
+                <!-- Notification about busy server -->
                 <div id="notification" style="display: none; color: red; margin-top: 20px;">
                     ⚠️ The server is currently busy due to high user activity. Please try again later. Thank you for your patience!
                 </div>
