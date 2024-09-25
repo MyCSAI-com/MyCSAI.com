@@ -1,5 +1,3 @@
-/* style.css */
-
 /* Universal Reset */
 * {
     margin: 0;
@@ -21,7 +19,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.9); /* Black background */
+    background-color: rgba(0, 0, 0, 0.9); /* Transparent black background */
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -30,7 +28,7 @@ body {
 /* Notification Box */
 .notification-box {
     padding: 20px;
-    background-color: #333; /* Black box */
+    background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red */
     border-radius: 10px;
     margin-bottom: 20px;
     color: #fff;
@@ -41,7 +39,7 @@ body {
 .user-count, 
 .about-founder, 
 .feedback-form-container {
-    background-color: #333; /* Black background */
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -78,7 +76,7 @@ button.generate-btn:hover {
 
 /* Feedback Form */
 #feedbackForm {
-    background-color: #444; /* Dark background for the form */
+    background-color: rgba(68, 68, 68, 0.9); /* Dark background for the form */
     padding: 15px;
     border-radius: 10px;
 }
@@ -118,9 +116,28 @@ button[type="submit"]:hover {
 }
 
 /* About Founder */
+.about-founder {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .about-founder img {
     border-radius: 50%;
     margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.about-founder p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.social-links {
+    margin-top: 15px;
 }
 
 .social-links a {
@@ -135,11 +152,12 @@ button[type="submit"]:hover {
 
 /* Footer */
 footer {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black */
     padding: 15px;
     color: white;
     border-radius: 10px;
     margin-top: 20px;
+    text-align: center;
 }
 
 footer a {
@@ -149,6 +167,11 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+footer p {
+    margin-bottom: 5px;
+}
+
 /* Responsive Styling */
 @media (max-width: 768px) {
     input.prompt-input,
