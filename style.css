@@ -260,3 +260,85 @@ button[type="submit"] {
 textarea#feedback {
     font-size: 14px;
 }
+
+.download-btn {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling */
+    animation: gradientAnimation 10s ease infinite; /* Animation for background gradient */
+    background: linear-gradient(270deg, #ff0000, #ff9900, #33cc33, #0099ff, #9933ff, #ff3399);
+    background-size: 400% 400%; /* Ensures the gradient is large enough to animate */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    position: relative; /* Position relative to use absolute positioning for inner elements */
+    z-index: 1; /* Ensure container is above the animated background */
+    padding: 20px;
+    color: white; /* Change text color for visibility */
+}
+
+/* Styling for the image container */
+.img-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center images horizontally */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px; /* Padding around images */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Individual image card styling */
+.img-card {
+    margin: 10px; /* Space between images */
+    text-align: center; /* Center the download button below the image */
+}
+
+/* Uniform image styling */
+.img-card img {
+    width: 150px; /* Fixed width for uniformity */
+    height: 150px; /* Fixed height for uniformity */
+    border-radius: 8px; /* Slight rounding of image corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow around images */
+}
+
+/* Download button styling */
+.download-btn {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
