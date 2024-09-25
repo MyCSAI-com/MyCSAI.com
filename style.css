@@ -1,113 +1,200 @@
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('https://wallpapercave.com/wp/wp2740855.jpg'); /* Update this path */
-    background-size: cover;
+/* style.css */
+
+/* Universal Reset */
+* {
     margin: 0;
-    padding: 20px;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-h1, h2, p {
-    margin: 10px 0;
+body {
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fphotos%2Fbackground&psig=AOvVaw0DZoFHm9bVdgKyh_3EJ60e&ust=1727370038448000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjF05eL34gDFQAAAAAdAAAAABAE'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section Styling */
+.image-generator h1, 
+.user-count, 
+h2, 
+p {
+    color: #fff;
+}
+
+/* Notification Box */
+div {
+    padding: 10px;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header, footer {
+    margin: 20px 0;
 }
 
 .image-generator {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    outline: 2px solid #007bff; /* Outline for the image generator section */
+    margin: 20px 0;
 }
 
 .generate-form {
-    display: inline-block;
+    margin: 20px 0;
 }
 
-.prompt-input {
+input.prompt-input {
     padding: 10px;
-    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 400px;
     border-radius: 5px;
-    outline: 2px solid transparent; /* Transparent outline initially */
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-.prompt-input:focus {
-    outline: 2px solid #007bff; /* Focused outline for the input */
+select.img-quantity {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.controls {
+button.generate-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.generate-btn:hover {
+    background-color: #218838;
+}
+
+/* Feedback Form */
+#feedbackForm {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+textarea#feedback {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     margin-top: 10px;
 }
 
-.generate-btn {
-    padding: 10px 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    outline: 2px solid transparent; /* Transparent outline initially */
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
-.generate-btn:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-    outline: 2px solid #0056b3; /* Outline on hover */
-}
-
+/* Image Gallery */
 .image-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
 }
 
-.img-card {
-    margin: 10px;
-    border: 1px solid #ccc;
+.image-gallery .img-card img {
+    width: 100%;
     border-radius: 10px;
-    overflow: hidden;
-    outline: 2px solid #28a745; /* Outline for each image card */
-    transition: box-shadow 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.img-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.img-card img {
-    max-width: 150px; /* Size adjustment for images */
-    max-height: 150px; /* Size adjustment for images */
-    display: block;
-}
-
-.download-btn {
-    display: inline-block;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #28a745;
+/* Social Links */
+.social-links a {
+    margin: 0 10px;
     color: white;
     text-decoration: none;
-    outline: 2px solid transparent; /* Transparent outline initially */
+    font-weight: bold;
 }
 
-.download-btn:hover {
-    background-color: #218838; /* Darker shade on hover */
-    outline: 2px solid #218838; /* Outline on hover */
+.social-links a:hover {
+    text-decoration: underline;
 }
 
+/* User Count Section */
 .user-count {
-    text-align: center;
-    margin: 20px 0;
-    outline: 2px solid #ffc107; /* Outline for user count section */
-    padding: 10px;
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* About Section */
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 footer {
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    color: white;
     margin-top: 20px;
-    outline: 2px solid #6c757d; /* Outline for footer */
-    padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+footer a {
+    color: #ffc107;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .generate-form {
+        width: 100%;
+    }
+
+    input.prompt-input, 
+    select.img-quantity, 
+    button.generate-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #feedbackForm {
+        width: 100%;
+        margin: 20px 0;
+    }
 }
