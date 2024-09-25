@@ -342,3 +342,56 @@ body {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: auto; /* Allow height to adjust based on content */
+    overflow: auto; /* Allow scrolling */
+    animation: gradientAnimation 10s ease infinite; /* Animation for background gradient */
+    background: linear-gradient(270deg, #ff0000, #ff9900, #33cc33, #0099ff, #9933ff, #ff3399);
+    background-size: 400% 400%; /* Ensures the gradient is large enough to animate */
+}
+
+.container {
+    position: relative; /* Position relative to use absolute positioning for inner elements */
+    z-index: 1; /* Ensure container is above the animated background */
+    padding: 20px;
+    color: white; /* Change text color for visibility */
+}
+
+/* Popup styles */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Above other content */
+}
+
+.popup img {
+    width: 100px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular logo */
+}
+
+.popup button {
+    background: #ff4444; /* Close button color */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.popup button:hover {
+    background: #ff0000; /* Darker on hover */
+}
+
+
