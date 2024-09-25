@@ -193,4 +193,112 @@
     </footer>
 </body>
 </html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Founder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Popup Styles */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            z-index: 2000; /* Ensure it's above other elements */
+        }
+
+        .popup-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 90%; /* Responsive */
+            max-height: 90%; /* Prevent overflow */
+            overflow: auto; /* Scroll if content exceeds */
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        a img {
+            width: 24px;
+            height: 24px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Trigger Button -->
+    <button id="openPopup" style="display:none;">About the Founder</button>
+
+    <!-- Popup Structure -->
+    <div class="popup" id="founderPopup">
+        <div class="popup-content">
+            <img src="https://avatars.githubusercontent.com/u/113254491?s=96&v=4" alt="Founder Image" style="width: 80px; height: auto; border-radius: 50%; margin-bottom: 15px;" />
+            <h2 style="color: #333; margin-bottom: 10px;">About the Founder</h2>
+            <p style="color: #555; line-height: 1.5; margin: 10px 0;">Hi, I'm <strong>Harshit Kumar</strong>, the founder of <strong>MyCSAI.com</strong>, an AI SaaS platform that has just started! I'm passionate about technology and helping others harness the power of AI.</p>
+            <p style="color: #555; line-height: 1.5; margin: 10px 0;">At MyCSAI.com, we aim to provide innovative solutions that make everyday tasks easier and more efficient. <strong>Join me on this journey!</strong></p>
+            <div style="margin: 15px 0;">
+                <a href="https://www.instagram.com/h4sh.p/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+                </a>
+                <a href="https://github.com/Harshit-haker" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" />
+                </a>
+            </div>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.getElementById("founderPopup");
+        const openPopup = document.getElementById("openPopup");
+        const closePopup = document.getElementById("closePopup");
+
+        // Function to open the popup
+        function showPopup() {
+            popup.style.display = "flex"; // Show the popup
+        }
+
+        // Function to close the popup
+        closePopup.onclick = function() {
+            popup.style.display = "none"; // Hide the popup
+        };
+
+        // Close the popup if the user clicks outside of it
+        window.onclick = function(event) {
+            if (event.target === popup) {
+                popup.style.display = "none"; // Hide the popup
+            }
+        };
+
+        // Automatically show the popup when the page loads
+        window.onload = function() {
+            showPopup();
+        };
+    </script>
+
+</body>
 
