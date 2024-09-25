@@ -194,116 +194,32 @@
 </body>
 </html>
 
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About the Founder</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4; /* Light background for contrast */
-        }
-
-        /* Popup styles */
-        .popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            display: none; /* Initially hidden */
-        }
-
-        .popup-content {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            width: 300px; /* Adjusted width */
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .popup-logo {
-            width: 80px; /* Adjusted logo size */
-            height: auto;
-            border-radius: 50%;
-            margin-bottom: 15px; /* Space below the logo */
-        }
-
-        h2 {
-            color: #333; /* Darker color for the header */
-            margin-bottom: 10px; /* Spacing below the header */
-        }
-
-        p {
-            color: #555; /* Lighter color for the text */
-            line-height: 1.5; /* Better line spacing for readability */
-            margin: 10px 0; /* Spacing between paragraphs */
-        }
-
-        .social-links {
-            margin: 15px 0; /* Margin for social links */
-        }
-
-        .social-icon {
-            width: 24px; /* Increased social icon size */
-            height: 24px; /* Increased social icon size */
-            margin: 0 5px; /* Spacing between icons */
-        }
-
-        .close-btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 16px; /* Font size for button */
-        }
-
-        .close-btn:hover {
-            background-color: #0056b3;
-        }
-
-        /* Responsive design */
-        @media (max-width: 320px) {
-            .popup-content {
-                width: 90%; /* Adjust width for smaller screens */
-            }
-        }
-    </style>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
 
     <!-- Trigger Button -->
     <button id="openPopup" style="display:none;">About the Founder</button>
 
     <!-- Popup Structure -->
-    <div class="popup" id="founderPopup">
-        <div class="popup-content">
-            <img src="https://avatars.githubusercontent.com/u/113254491?s=96&v=4" alt="Founder Image" class="popup-logo" />
-            <h2>About the Founder</h2>
-            <p>Hi, I'm <strong>Harshit Kumar</strong>, the founder of <strong>MyCSAI.com</strong>, an AI SaaS platform that has just started! I'm passionate about technology and helping others harness the power of AI.</p>
-            <p>At MyCSAI.com, we aim to provide innovative solutions that make everyday tasks easier and more efficient. <strong>Join me on this journey!</strong></p>
-            <div class="social-links">
+    <div class="popup" id="founderPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center; z-index: 1000; display: none;">
+        <div style="background-color: white; border-radius: 8px; padding: 20px; width: 300px; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);">
+            <img src="https://avatars.githubusercontent.com/u/113254491?s=96&v=4" alt="Founder Image" style="width: 80px; height: auto; border-radius: 50%; margin-bottom: 15px;" />
+            <h2 style="color: #333; margin-bottom: 10px;">About the Founder</h2>
+            <p style="color: #555; line-height: 1.5; margin: 10px 0;">Hi, I'm <strong>Harshit Kumar</strong>, the founder of <strong>MyCSAI.com</strong>, an AI SaaS platform that has just started! I'm passionate about technology and helping others harness the power of AI.</p>
+            <p style="color: #555; line-height: 1.5; margin: 10px 0;">At MyCSAI.com, we aim to provide innovative solutions that make everyday tasks easier and more efficient. <strong>Join me on this journey!</strong></p>
+            <div style="margin: 15px 0;">
                 <a href="https://www.instagram.com/h4sh.p/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px; margin: 0 5px;" />
                 </a>
                 <a href="https://github.com/Harshit-haker" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="social-icon" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" style="width: 24px; height: 24px; margin: 0 5px;" />
                 </a>
             </div>
-            <button id="closePopup" class="close-btn">Close</button>
+            <button id="closePopup" style="background-color: #007bff; color: white; border: none; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px;">Close</button>
         </div>
     </div>
 
@@ -341,6 +257,7 @@
     </script>
 
 </body>
-</html>
+
+
 
 
