@@ -194,3 +194,57 @@
 </body>
 </html>
 
+<!-- Trigger Button -->
+<button id="openPopup" style="display:none;">About the Founder</button>
+
+<!-- Popup Structure -->
+<div class="popup" id="founderPopup">
+    <img src="https://avatars.githubusercontent.com/u/113254491?s=96&v=4" alt="Founder Image" class="popup-logo" />
+    <h2>About the Founder</h2>
+    <p>Hi, I'm Harshit Kumar, the founder of MyCSAI.com, an AI SaaS platform that has just started! I'm passionate about technology and helping others harness the power of AI.</p>
+    <p>At MyCSAI.com, we aim to provide innovative solutions that make everyday tasks easier and more efficient. Join me on this journey!</p>
+    <div class="social-links">
+        <a href="https://www.instagram.com/h4sh.p/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon" />
+        </a>
+        <a href="https://github.com/Harshit-haker" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="social-icon" />
+        </a>
+    </div>
+    <button id="closePopup">Close</button>
+</div>
+
+<script>
+    // Get the modal
+    const popup = document.getElementById("founderPopup");
+
+    // Get the button that opens the modal
+    const openPopup = document.getElementById("openPopup");
+
+    // Get the button that closes the modal
+    const closePopup = document.getElementById("closePopup");
+
+    // Function to open the popup
+    function showPopup() {
+        popup.style.display = "block";
+    }
+
+    // When the user clicks the close button, close the modal
+    closePopup.onclick = function() {
+        popup.style.display = "none";
+    }
+
+    // Close the popup if the user clicks outside of it
+    window.onclick = function(event) {
+        if (event.target === popup) {
+            popup.style.display = "none";
+        }
+    }
+
+    // Automatically show the popup when the page loads
+    window.onload = function() {
+        showPopup();
+    }
+</script>
+
+
