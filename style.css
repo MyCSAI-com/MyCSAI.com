@@ -19,7 +19,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.9); /* Transparent black background */
+    background-color: rgba(0, 0, 0, 0.651); /* Transparent black background */
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -39,7 +39,7 @@ body {
 .user-count, 
 .about-founder, 
 .feedback-form-container {
-    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+    background-color: rgba(0, 0, 0, 0.658); /* Transparent black background */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -118,7 +118,7 @@ button[type="submit"]:hover {
 /* About Founder */
 .about-founder {
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Transparent black */
+    background-color: rgba(0, 0, 0, 0.678); /* Transparent black */
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
@@ -152,7 +152,7 @@ button[type="submit"]:hover {
 
 /* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.8); /* Transparent black */
+    background-color: rgba(0, 0, 0, 0.589); /* Transparent black */
     padding: 15px;
     color: white;
     border-radius: 10px;
