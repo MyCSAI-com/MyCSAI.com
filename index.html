@@ -37,7 +37,87 @@
         window.onload = function() {
             document.getElementById('userCount').innerText = getRandomUserCount();
         };
+
+        // Functionality for image search
+        async function searchImages() {
+            const search_value = document.querySelector('#search').value;
+            const imgQuantity = document.querySelector('.img-quantity').value; // Get the selected quantity
+
+            if (search_value === '') {
+                alert('Please enter a search term');
+                return;
+            } else {
+                const key = 'Wixcl6BB9Kl3wz6Opr7Bpp225Msz-7agY46wBdKLUWA';
+                const url = `https://api.unsplash.com/search/photos?page=1&query=${search_value}&client_id=${key}`;
+                let data = await fetch(url);
+                data = await data.json();
+
+                // Show loading for 2 seconds before displaying images
+                const loading = document.getElementById('loading');
+                loading.style.display = 'block';
+
+                setTimeout(() => {
+                    loading.style.display = 'none'; // Hide loading animation
+                    displayImages(data, imgQuantity); // Display images after loading
+                }, 2000);
+            }
+        }
+
+        function displayImages(data, imgQuantity) {
+            const img_container = document.querySelector('.img-container');
+            img_container.innerHTML = ''; // Clear the existing images
+            const imagesToShow = data.results.slice(0, imgQuantity); // Limit to the selected quantity
+
+            imagesToShow.forEach(element => {
+                const imgDiv = document.createElement('div');
+                imgDiv.classList.add('img-card');
+
+                const img = document.createElement('img');
+                img.src = element.urls.regular;
+                img.alt = element.alt_description || 'Generated Image';
+                img.style.width = '150px'; // Set image width to 150px
+                img.style.height = 'auto'; // Keep aspect ratio
+
+                const downloadBtn = document.createElement('a');
+                downloadBtn.href = element.urls.regular; // Image URL for download
+                downloadBtn.download = ''; // Enable download
+                downloadBtn.innerText = 'Download';
+                downloadBtn.classList.add('download-btn'); // Add class for styling
+                downloadBtn.style.display = 'block'; // Display as block element
+
+                imgDiv.appendChild(img);
+                imgDiv.appendChild(downloadBtn);
+                img_container.appendChild(imgDiv);
+            });
+        }
     </script>
+    <style>
+        .img-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping to the next line */
+            justify-content: center; /* Center images horizontally */
+        }
+
+        .img-card {
+            margin: 10px; /* Space between images */
+            text-align: center; /* Center the download button below the image */
+        }
+
+        .download-btn {
+            margin-top: 5px;
+            padding: 5px 10px;
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -50,7 +130,7 @@
             <h1>AI Image Generator Tool</h1>
             <p>Convert your text into an image within seconds using the MyCSAI-powered AI Image Generator tool.</p>
             <form action="#" class="generate-form">
-                <input class="prompt-input" type="text" placeholder="Describe what you want to see" required>
+                <input class="prompt-input" type="text" id="search" placeholder="Describe what you want to see" required>
                 <div class="controls">
                     <select class="img-quantity">
                         <option value="1">1 Image</option>
@@ -58,7 +138,7 @@
                         <option value="3">3 Images</option>
                         <option value="4" selected>4 Images</option>
                     </select>
-                    <button type="button" class="generate-btn" onclick="showNotification()">Generate</button>
+                    <button type="button" id="search-btn" class="generate-btn" onclick="searchImages()">Generate</button>
                 </div>
 
                 <!-- Loading animation -->
@@ -73,11 +153,11 @@
             </form>
         </section>
 
+        <!-- Updated image gallery that will change based on search results -->
         <section class="image-gallery">
-            <div class="img-card"><img src="images/img-1.jpg" alt="image"></div>
-            <div class="img-card"><img src="images/img-2.jpg" alt="image"></div>
-            <div class="img-card"><img src="images/img-3.jpg" alt="image"></div>
-            <div class="img-card"><img src="images/img-4.jpg" alt="image"></div>
+            <div class="img-container">
+                <!-- Images will be appended here dynamically based on the search results -->
+            </div>
         </section>
 
         <section class="user-count">
@@ -113,3 +193,4 @@
     </footer>
 </body>
 </html>
+
