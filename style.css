@@ -9,25 +9,11 @@
 }
 
 body {
-    background-image: url('https://img.freepik.com/premium-photo/abstract-shadowy-textures-subtle-highlights-luminescence-seep-through-dark-background_764067-9315.jpg'); /* Replace with your background image URL */
+    background-image: url('https://yourbackgroundimage.com/image.jpg'); /* Replace with your background image URL */
     background-size: cover;
     background-position: center;
-    color: #333;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Section Styling */
-.image-generator h1, 
-.user-count, 
-h2, 
-p {
     color: #fff;
-}
-
-/* Notification Box */
-div {
-    padding: 10px;
+    padding: 20px;
 }
 
 /* Container Styling */
@@ -35,21 +21,31 @@ div {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9); /* Black background */
     border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
-header, footer {
-    margin: 20px 0;
+/* Notification Box */
+.notification-box {
+    padding: 20px;
+    background-color: #333; /* Black box */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
-.image-generator {
-    margin: 20px 0;
-}
-
-.generate-form {
-    margin: 20px 0;
+/* Section Styling */
+.image-generator, 
+.user-count, 
+.about-founder, 
+.feedback-form-container {
+    background-color: #333; /* Black background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
 }
 
 input.prompt-input {
@@ -58,11 +54,12 @@ input.prompt-input {
     max-width: 400px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 16px;
     margin-bottom: 10px;
+    font-size: 16px;
 }
 
-select.img-quantity {
+select.img-quantity, 
+button.generate-btn {
     padding: 10px;
     margin-right: 10px;
     border-radius: 5px;
@@ -72,11 +69,7 @@ select.img-quantity {
 button.generate-btn {
     background-color: #28a745;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 button.generate-btn:hover {
@@ -85,14 +78,9 @@ button.generate-btn:hover {
 
 /* Feedback Form */
 #feedbackForm {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #444; /* Dark background for the form */
     padding: 15px;
     border-radius: 10px;
-    display: inline-block;
-    text-align: left;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
 }
 
 textarea#feedback {
@@ -121,51 +109,37 @@ button[type="submit"]:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
-    padding: 20px;
 }
 
 .image-gallery .img-card img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Social Links */
+/* About Founder */
+.about-founder img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
 .social-links a {
     margin: 0 10px;
-    color: white;
+    color: #ffc107;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .social-links a:hover {
     text-decoration: underline;
 }
 
-/* User Count Section */
-.user-count {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    border-radius: 10px;
-    display: inline-block;
-    width: 100%;
-    max-width: 400px;
-    margin: 20px auto;
-}
-
-/* About Section */
-h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
+/* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #000;
     padding: 15px;
     color: white;
-    margin-top: 20px;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
 footer a {
@@ -175,26 +149,91 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
 /* Responsive Styling */
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    .generate-form {
-        width: 100%;
-    }
-
-    input.prompt-input, 
-    select.img-quantity, 
+    input.prompt-input,
+    select.img-quantity,
     button.generate-btn {
         width: 100%;
         margin-bottom: 10px;
+        font-size: 14px;
     }
 
-    #feedbackForm {
-        width: 100%;
-        margin: 20px 0;
+    .controls {
+        display: flex;
+        flex-direction: column;
     }
+
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .about-founder img {
+        width: 80px;
+        height: 80px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    input.prompt-input,
+    select.img-quantity,
+    button.generate-btn {
+        font-size: 12px;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 8px;
+    }
+
+    .about-founder img {
+        width: 60px;
+        height: 60px;
+    }
+
+    footer {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile First Adjustments */
+body {
+    padding: 10px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.notification-box {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.image-generator,
+.user-count,
+.about-founder,
+.feedback-form-container {
+    padding: 10px;
+    font-size: 14px;
+}
+
+h1, h2 {
+    font-size: 22px;
+}
+
+button.generate-btn,
+button[type="submit"] {
+    font-size: 14px;
+}
+
+textarea#feedback {
+    font-size: 14px;
 }
